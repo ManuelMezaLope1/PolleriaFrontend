@@ -1,0 +1,38 @@
+<div class="menu-container">
+
+    <h1 class="titulo">🍗 Nuestra Carta</h1>
+
+    <div *ngFor="let cate of categorias$ | async">
+        <br>
+        <h2 class="categoria">🔥 {{cate.nombre}}</h2>
+
+        <div class="menu-grid row">
+            <div class="row">
+                <div class="col-md-4 mb-3" *ngFor="let plato of cate.plato">
+                    <!-- CARD -->
+                    <div class="card">
+                        <div class="img-container">
+                            <img
+                                src="https://buenazo.cronosmedia.glr.pe/original/2023/07/10/64ac3243f4f7c015c440d901.jpg">
+                            <span class="tag">🔥 Más pedido</span>
+                        </div>
+
+                        <div class="card-body">
+                            <h3>{{plato.nombre}}</h3>
+                            <p>{{plato.descripcion}}</p>
+
+                            <div class="bottom">
+                                <span class="precio">S/ {{plato.precio}}</span>
+                                <button>🛒</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="!cate.plato || cate.plato.length === 0">
+            <p>No hay platos en esta categoría.</p>
+        </div>
+    </div>
+</div>
