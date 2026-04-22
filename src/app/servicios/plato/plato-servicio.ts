@@ -7,7 +7,7 @@ import { Plato } from '../../componentes/plato/Plato';
   providedIn: 'root',
 })
 export class PlatoServicio {
-  private baseUrl="industrious-motivation-production-30f2.up.railway.app/api/v1/platos";
+  private baseUrl="https://industrious-motivation-production-30f2.up.railway.app/api/v1/platos";
 
   constructor(private HttpClient: HttpClient){}
 

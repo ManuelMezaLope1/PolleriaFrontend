@@ -7,7 +7,7 @@ import { Rol } from '../../componentes/rol/Rol';
   providedIn: 'root',
 })
 export class RolServicio {
-  private baseUrl="industrious-motivation-production-30f2.up.railway.app/api/v1/roles";
+  private baseUrl="https://industrious-motivation-production-30f2.up.railway.app/api/v1/roles";
 
   constructor(private HttpClient:HttpClient){}
 
