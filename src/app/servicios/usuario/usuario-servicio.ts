@@ -6,6 +6,7 @@ import { Usuario } from '../../componentes/usuario/Usuario';
 @Injectable({
   providedIn: 'root',
 })
+
 export class UsuarioServicio {
   private baseURL="industrious-motivation-production-30f2.up.railway.app/api/v1/usuarios";
 
