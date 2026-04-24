@@ -15,8 +15,7 @@ import { catchError, of, tap } from 'rxjs';
 })
 export class IniciarSesionComponent {
   email = '';
-  password = '';
-
+  password = ''; 
   constructor(private router: Router) {}
 
   iniciarSesion() {
