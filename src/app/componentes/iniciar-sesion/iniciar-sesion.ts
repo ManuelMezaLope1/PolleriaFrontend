@@ -14,12 +14,27 @@ import { catchError, of, tap } from 'rxjs';
   styleUrl: './iniciar-sesion.css'
 })
 export class IniciarSesionComponent {
-  email:string;
-  usuario: Usuario[]=[];
+  email = '';
+  password = '';
 
-  constructor(private usuarioServicio: UsuarioServicio, private router: Router, private route: ActivatedRoute){}
+  constructor(private router: Router) {}
 
-  ngOnInit(): void{
-    
+  iniciarSesion() {
+    if (this.email && this.password) {
+      console.log('Iniciando sesión con:', this.email);
+      localStorage.setItem('usuario', this.email);
+      alert('✅ ¡Sesión iniciada correctamente!');
+      this.router.navigate(['/inicio']);
+    } else {
+      alert('❌ Por favor, completa todos los campos');
+    }
+  }
+
+  loginWithGoogle() {
+    alert('🔐 Próximamente: Inicio de sesión con Google');
+  }
+
+  loginWithFacebook() {
+    alert('🔐 Próximamente: Inicio de sesión con Facebook');
   }
 }
